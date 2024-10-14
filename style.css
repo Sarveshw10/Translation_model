@@ -1,0 +1,174 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#app-logo {
+    width: 80px; /* Adjust this size as needed */
+    height: 40px;
+    margin-right: 10px; /* Add some space between the logo and the text */
+}
+
+header h1 {
+    font-size: 24px;
+    color: #004080;
+    margin: 0;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+}
+
+#direction-label {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #00b9e6;
+}
+
+#toggle-button {
+    background-color: #00cfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#toggle-button:hover {
+    background-color: #00a9cc;
+}
+
+/* Translation Area */
+.translation-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Input Section */
+.input-section, .output-section {
+    width: 48%;
+}
+
+.input-section h2, .output-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #00b9e6;
+    outline: none;
+}
+
+.input-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-controls button {
+    background-color: #00b9e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.input-controls button:hover {
+    background-color: #008fb3;
+}
+
+#copy-output-btn {
+    background-color: #00cfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#copy-output-btn:hover {
+    background-color: #00a9cc;
+}
+
+/* Spinner styles */
+.loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Translate Button */
+.translate-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#translate-btn {
+    background: linear-gradient(to right, #00cfff, #00a9cc);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#translate-btn:hover {
+    background: linear-gradient(to right, #008fb3, #006f94);
+}

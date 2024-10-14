@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <div class="logo-container">
+            <img src="templates/logo.png" alt="App Logo" id="app-logo">
+            <h1>Translator App</h1>
+        </div>
+        <div class="toggle">
+            <span id="direction-label">Marathi to English</span>
+            <button id="toggle-button">Switch</button>
+        </div>
+    </header>
+
+    <div class="translation-area">
+        <div class="input-section">
+            <h2>Marathi</h2>
+            <textarea id="input-text" placeholder="Enter text here..."></textarea>
+            <div class="input-controls">
+                <button id="clear-btn">Clear</button>
+                <button id="copy-btn">Copy</button>
+                <button id="paste-btn">Paste</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>English</h2>
+            <textarea id="output-text" placeholder="Translation will appear here..." readonly></textarea>
+            <button id="copy-output-btn">Copy</button>
+        </div>
+    </div>
+
+    <!-- Loading Icon -->
+    <div id="loading-icon" class="loading-spinner" style="display: none;"></div>
+
+    <div class="translate-btn-container">
+        <button id="translate-btn">Translate</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
